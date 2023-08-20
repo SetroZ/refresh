@@ -1,10 +1,31 @@
-import Image from 'next/image'
-
+import Image from "next/image";
+import Hero from "public/hero.png";
+import styles from "./page.module.css";
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      
-    </main>
-  )
+    <div className="flex items-center gap-10 ">
+      <div className=" flex flex-col gap-20   ">
+        <h1
+          className={`${styles.gradtext}
+         text-7xl font-bold leading-[6rem]
+          
+         `}
+        >
+          Better Design for your Digital Products
+        </h1>
+        <p className="text-2xl font-thin">
+          Turning your Idea into Reality. We bring together the teams from the
+          global tech industry
+        </p>
+        <button className="p-2 self-start text-white bg-green-800 rounded-lg  ">
+          See Our Works
+        </button>
+      </div>
+      <Image
+        className="object-cover w-[100%] max-h-[900px] "
+        src={Hero}
+        alt="Hero image"
+      />
+    </div>
+  );
 }
-git 

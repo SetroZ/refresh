@@ -1,0 +1,6 @@
+.gradtext{
+
+    background: linear-gradient(90deg, rgba(46,94,0,1) 0%, rgba(197,205,194,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
