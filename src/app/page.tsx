@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Hero from "public/hero.png";
 import styles from "./page.module.css";
+import { Metadata } from "next";
+export const metadata:Metadata={
+  title:'Lama Dev',
+  description:'lama dev page'
+}
+
 export default function Home() {
   return (
     <div className="flex items-center gap-10 ">
@@ -22,7 +28,7 @@ export default function Home() {
         </button>
       </div>
       <Image
-        className="object-cover w-[100%] max-h-[900px] "
+        className="object-contain w-[100%] max-h-[900px] "
         src={Hero}
         alt="Hero image"
       />
