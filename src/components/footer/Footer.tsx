@@ -1,37 +1,37 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 const IconList: { id: number; alt: string; link: string }[] = [
   {
     id: 0,
-    alt: "facebook",
-    link: "/facebook.svg",
+    alt: 'facebook',
+    link: '/facebook.svg',
   },
   {
     id: 1,
-    alt: "twitter",
-    link: "/twitter.svg",
+    alt: 'twitter',
+    link: '/twitter.svg',
   },
   {
     id: 2,
-    alt: "instagram",
-    link: "/instagram.svg",
+    alt: 'instagram',
+    link: '/instagram.svg',
   },
   {
     id: 3,
-    alt: "youtube",
-    link: "/youtube.svg",
+    alt: 'youtube',
+    link: '/youtube.svg',
   },
-];
+]
 const Footer = () => {
   return (
-    <footer className="h-11 flex justify-between items-center">
-      <p>Lamiama</p>
-      <div className="flex gap-1 ">
+    <footer className='h-11 flex justify-between items-center'>
+      <p>testiama</p>
+      <div className='flex gap-1 '>
         {IconList.map((icon) => (
-          <a href="https://www.boogers.com" key={icon.id}>
+          <a href='https://www.boogers.com' key={icon.id}>
             <Image
-              className="opacity-30"
+              className='opacity-30'
               width={25}
               height={25}
               src={icon.link}
@@ -41,7 +41,7 @@ const Footer = () => {
         ))}
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
