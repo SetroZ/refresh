@@ -6,9 +6,10 @@ const Register = () => {
   const router = useRouter();
   const handleSumbit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const name = e.target[0].value;
-    const email = e.target[1].value;
-    const password = e.target[2].value;
+    const target = e.target as HTMLFormElement; 
+    const name = (target[0] as HTMLInputElement).value; 
+    const email = (target[1] as HTMLInputElement).value; 
+    const password = (target[2] as HTMLInputElement).value; 
     try {
       const res = await fetch("/api/auth/register", {
         method: "POST",

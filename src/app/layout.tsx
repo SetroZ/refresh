@@ -27,12 +27,12 @@ export default function RootLayout({
       dark:bg-black dark:text-white transition-colors duration-500 
       "
       >
-        <header className=" w-[100%]">
-          <Navbar>
-            <DarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-          </Navbar>
-        </header>
         <SessionProvider>
+          <header className=" w-[100%]">
+            <Navbar>
+              <DarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            </Navbar>
+          </header>
           <main className="">{children}</main>
         </SessionProvider>
 

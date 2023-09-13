@@ -4,8 +4,10 @@ import React, { Children } from "react";
 
 import linkList from "./data";
 import Link from "next/link";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = ({ children }: { children: React.ReactNode }) => {
+  const session = useSession();
   return (
     <nav
       className="flex
@@ -23,12 +25,17 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
             <Link href={link.url}>{link.title}</Link>
           </li>
         ))}
-        <li
-          className="font-semibold p-1 bg-green-700  rounded-sm cursor-pointer text-white "
-          onClick={() => console.log("x")}
-        >
-          Logout
-        </li>
+
+        {session.status == "authenticated" ? (
+          <li
+            className="font-semibold p-1 bg-green-700  rounded-sm cursor-pointer text-white "
+            onClick={()=>signOut()}
+          >
+            Logout
+          </li>
+        ) : (
+          ""
+        )}
       </ul>
     </nav>
   );
